@@ -7,3 +7,12 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+.navbar > .container,
+.navbar > .container-fluid {
+    .navbar-brand.logo {
+        color: $c-logo;
+        font-weight: bold;
+    }
+}
