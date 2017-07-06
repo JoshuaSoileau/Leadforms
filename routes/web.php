@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+////
+//Route::get('/about', function () {
+//    $bestTeam = ['Josh', 'Michael', 'Brent', 'Rob', 'Luke', 'Marc'];
+//    return view('about')->with('team', $bestTeam);
+//});
+
+Route::get('/', 'PagesController@home');
