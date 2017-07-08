@@ -8361,3 +8361,7 @@ button.close {
   padding: 14px 10px;
 }
 
+.btn-icon span {
+  margin-right: 8px;
+}
+

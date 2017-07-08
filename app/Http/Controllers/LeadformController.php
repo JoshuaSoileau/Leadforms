@@ -62,7 +62,6 @@ class LeadformController extends Controller
     public function show($id)
     {
         $leadform = \App\Leadform::find($id);
-
         return view('leadforms.view')->with('leadform', $leadform);
     }
 
@@ -74,7 +73,8 @@ class LeadformController extends Controller
      */
     public function edit($id)
     {
-        //
+        $leadform = \App\Leadform::find($id);
+        return view('leadforms.edit')->with('currentform', $leadform);
     }
 
     /**
@@ -83,9 +83,20 @@ class LeadformController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update($id, Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required'
+        ]);
+
+        $params = Input::all();
+
+        $form = Leadform::find($id);
+        $form->update($params);
+        $form->save();
+
+        // redirect
+        return redirect('leadforms')->with('message', $form->title . ' has been updated.');
     }
 
     /**
