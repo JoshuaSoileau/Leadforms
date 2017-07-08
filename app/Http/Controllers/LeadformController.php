@@ -17,7 +17,7 @@ class LeadformController extends Controller
     public function index()
     {
         // get all the nerds
-        $forms = Leadform::where('user_id', Auth::id());
+        $forms = \App\Leadform::where('user_id', Auth::id())->get();
 
         // load the view and pass the nerds
         return view('leadforms.index')
