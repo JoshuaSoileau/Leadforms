@@ -15,6 +15,7 @@
 </head>
 <body>
     <div id="app">
+        <div class="container-fluid text-center leads-remaining">Get 100 free lead submissions for free</div>
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -28,8 +29,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand logo" href="{{ url('/') }}">
+                        {{ config('app.name', 'LeadForms') }}
                     </a>
                 </div>
 

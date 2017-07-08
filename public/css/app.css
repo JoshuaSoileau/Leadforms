@@ -8356,3 +8356,8 @@ button.close {
   font-weight: bold;
 }
 
+.leads-remaining {
+  background: #CAEFE9;
+  padding: 14px 10px;
+}
+

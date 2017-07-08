@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function forms() {
+        $this->hasMany('Forms');
+    }
+
+    public function leads() {
+        $this->hasManyThrough('Leads', 'Forms');
+    }
 }
