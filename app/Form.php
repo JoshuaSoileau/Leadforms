@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Forms extends Model
+class Form extends Model
 {
     protected $fillable = [
         'header',
@@ -18,10 +18,10 @@ class Forms extends Model
     ];
 
     public function user() {
-        return $this->belongsToMany('User', 'user_id');
+        return $this->belongsTo('User');
     }
 
     public function leads() {
-        return $this->hasMany('Leads');
+        return $this->hasMany('Lead');
     }
 }

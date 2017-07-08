@@ -15,7 +15,7 @@ class CreateLeadsTable extends Migration
     {
         Schema::create('leads', function (Blueprint $table) {
             $table->increments('id');
-            
+
             $table->string('form_fields');
             $table->string('user_id');
             $table->string('form_id');

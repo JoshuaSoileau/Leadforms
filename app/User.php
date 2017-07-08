@@ -28,10 +28,10 @@ class User extends Authenticatable
     ];
 
     public function forms() {
-        $this->hasMany('Forms');
+        $this->hasMany('Form');
     }
 
     public function leads() {
-        $this->hasManyThrough('Leads', 'Forms');
+        $this->hasMany('Lead');
     }
 }
