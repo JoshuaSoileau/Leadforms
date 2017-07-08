@@ -18,15 +18,15 @@ class CreateLeadformsTable extends Migration
 
             $table->string('user_id');
             $table->string('title');
-            $table->string('header');
-            $table->string('subheader');
-            $table->string('form_fields');
-            $table->string('button_text');
-            $table->string('button_color');
-            $table->string('image');
-            $table->string('ty_header');
-            $table->string('ty_subheader');
-            $table->string('magnet');
+            $table->string('header')->nullable();
+            $table->string('subheader')->nullable();
+            $table->string('form_fields')->nullable();
+            $table->string('button_text')->nullable();
+            $table->string('button_color')->nullable();
+            $table->string('image')->nullable();
+            $table->string('ty_header')->nullable();
+            $table->string('ty_subheader')->nullable();
+            $table->string('magnet')->nullable();
 
             $table->timestamps();
         });

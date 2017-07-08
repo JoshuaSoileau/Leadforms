@@ -72,6 +72,29 @@
             </div>
         </nav>
 
+        @if (session('message'))
+            <div class="container">
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+            </div>
+        @endif
+
+        @if(count($errors))
+        <div class="container">
+            <div class="panel panel-danger">
+                <div class="panel-heading">Error!</div>
+                <div class="panel-body">
+                    <ul>
+                        @foreach ($errors->all() as $message)
+                            <li>{!! $message !!}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+        @endif
+
         @yield('content')
     </div>
 

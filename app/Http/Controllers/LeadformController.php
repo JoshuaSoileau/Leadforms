@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 use App\Leadform;
 
 class LeadformController extends Controller
@@ -38,9 +39,20 @@ class LeadformController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required'
+        ]);
+
+        $params = Input::all();
+        $params['user_id'] = Auth::id();
+
+        $newForm = Leadform::create($params);
+        $newForm->save();
+
+        // redirect
+        return redirect('leadforms')->with('message', 'You created a new leadform!');
     }
 
     /**

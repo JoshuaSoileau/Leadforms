@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Leadform extends Model
 {
     protected $fillable = [
+        'user_id',
+        'title',
         'header',
         'subheader',
         'form_fields',
