@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="container-fluid text-center leads-remaining">Get 100 free lead submissions for free</div>
+        <div class="container-fluid text-center leads-remaining">Get 30 lead submissions for free</div>
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -46,7 +46,7 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
-                            <li><a href="{{ URL::to('forms') }}">My Forms</a></li>
+                            <li><a href="{{ URL::to('leadforms') }}">My Forms</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>

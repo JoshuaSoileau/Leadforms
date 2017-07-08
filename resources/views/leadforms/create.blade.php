@@ -5,12 +5,23 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Create Forms</div>
+                    <div class="panel-heading">Create a Form</div>
                     <div class="panel-body">
                         {!! Form::open(array('url' => 'forms')) !!}
                         <div class="form-group">
-                            {{ Form::label('title', 'Form Title (only visible to you)') }}
-                            {{ Form::text('title', Input::old('title'), array('class' => 'form-control')) }}
+                            {{ Form::text('title', Input::old('title'), array('class' => 'form-control', 'placeholder' => 'Form Title (only visible to you)')) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::text('header', Input::old('header'), array('class' => 'form-control', 'placeholder' => 'Header')) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::text('subheader', Input::old('subheader'), array('class' => 'form-control', 'placeholder' => 'Sub Header')) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::text('form_fields', Input::old('form_fields'), array('class' => 'form-control', 'placeholder' => 'Form Fields')) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::text('button_text', Input::old('header'), array('class' => 'form-control', 'placeholder' => 'Button Text')) }}
                         </div>
                         {!! Form::close() !!}
                     </div>
