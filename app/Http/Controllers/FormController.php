@@ -20,7 +20,7 @@ class FormController extends Controller
 
         // load the view and pass the nerds
         return view('forms.index')
-            ->with('nerds', $forms);
+            ->with('forms', $forms);
     }
 
     /**
