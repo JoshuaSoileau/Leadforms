@@ -16,10 +16,8 @@ class LeadformController extends Controller
      */
     public function index()
     {
-        // get all the nerds
         $forms = \App\Leadform::where('user_id', Auth::id())->get();
 
-        // load the view and pass the nerds
         return view('leadforms.index')
             ->with('leadforms', $forms);
     }
@@ -63,7 +61,9 @@ class LeadformController extends Controller
      */
     public function show($id)
     {
-        //
+        $leadform = \App\Leadform::find($id);
+
+        return view('leadforms.view')->with('leadform', $leadform);
     }
 
     /**
