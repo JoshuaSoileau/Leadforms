@@ -9,11 +9,13 @@
 
                 <div class="panel-body">
                     <div class="panel panel-body panel-default col-sm-3 text-center">
-                        <a href="{{ URL::to('forms/create') }}">New Form</a>
+                        <a href="{{ URL::to('leadforms/create') }}">New Form</a>
                     </div>
-                    @foreach($forms as $key => $value)
+                    @foreach($leadforms as $key => $value)
                         <div class="panel panel-body panel-default col-sm-3 text-center">
-                            <a href="{{ URL::to('forms/' . $value->id . 'create') }}">{{ $value->title }}</a>
+                            {{ $value->title }}
+                            <a href="{{ URL::to('leadforms/' . $value->id . '/show') }}">View</a>
+                            <a href="{{ URL::to('leadforms/' . $value->id . '/edit') }}">Edit</a>
                         </div>
                     @endforeach
                 </div>

@@ -8,8 +8,8 @@ class Lead extends Model
 {
     protected $fillable = ['form_fields'];
 
-    public function form() {
-        return $this->belongsTo('Form');
+    public function leadform() {
+        return $this->belongsTo('Leadform');
     }
 
     public function user() {

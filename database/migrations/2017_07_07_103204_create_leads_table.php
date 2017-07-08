@@ -18,7 +18,7 @@ class CreateLeadsTable extends Migration
 
             $table->string('form_fields');
             $table->string('user_id');
-            $table->string('form_id');
+            $table->string('leadform_id');
 
             $table->timestamps();
         });

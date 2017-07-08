@@ -27,8 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function forms() {
-        $this->hasMany('Form');
+    public function leadforms() {
+        $this->hasMany('Leadform');
     }
 
     public function leads() {

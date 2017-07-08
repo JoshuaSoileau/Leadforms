@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Form;
+use App\Leadform;
 
-class FormController extends Controller
+class LeadformController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +16,11 @@ class FormController extends Controller
     public function index()
     {
         // get all the nerds
-        $forms = Form::where('user_id', Auth::id());
+        $forms = Leadform::where('user_id', Auth::id());
 
         // load the view and pass the nerds
-        return view('forms.index')
-            ->with('forms', $forms);
+        return view('leadforms.index')
+            ->with('leadforms', $forms);
     }
 
     /**
@@ -30,7 +30,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        //
+        return view('leadforms.create');
     }
 
     /**
